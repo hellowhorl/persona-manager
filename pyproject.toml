@@ -19,6 +19,7 @@ readme = "README.md"
 description = "Persona management CLI for whorl personas"
 
 [project.scripts]
-create = "cli:Cmd.create"
-cancel = "cli:Cmd.cancel"
-delete = "cli:Cmd.delete"
+#create = "cli:Cmd.create"
+#cancel = "cli:Cmd.cancel"
+#delete = "cli:Cmd.delete"
+pmgr = "cli:main"

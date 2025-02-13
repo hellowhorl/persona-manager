@@ -10,6 +10,7 @@ api_port = cliarg.optional.port or 8000
 
 class Cmd:
 
+    @staticmethod
     def create():
         name = cliarg.optional.name
         prompt = None
@@ -39,8 +40,10 @@ class Cmd:
             files = {
                 "file_binary": file if file else ""
             }
+        )
         print(response.json())
 
+    @staticmethod
     def cancel():
         thread_id = cliarg.optional.thread_id
         if not thread_id:
@@ -53,6 +56,7 @@ class Cmd:
             print("Error stopping thread.")
         return
 
+    @staticmethod
     def delete(self):
         thread_id = cliarg.optional.thread_id
         if not thread_id:
@@ -64,3 +68,13 @@ class Cmd:
         if not response.status_code == 200:
             print("Error deleting thread.")
         return
+
+def main():
+    command = sys.argv[1]
+    cmd = Cmd()
+    if command == "create":
+        cmd.create()
+    if command == "cancel":
+        cmd.cancel()
+    if command == "delete":
+        cmd.delete()
