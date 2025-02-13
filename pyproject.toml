@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta:__legacy__"
+
+[project]
+name = "world-persona-manager"
+version = "0.1.0"
+dependencies = [
+    "arglite",
+    "pennant",
+    "pyyaml",
+    "fake-useragent",
+    "python-dotenv",
+    "requests",
+    "rich"
+]
+
+readme = "README.md"
+description = "Persona management CLI for whorl personas"
+
+[project.scripts]
+create = "cli:Cmd.create"
+cancel = "cli:Cmd.cancel"
+delete = "cli:Cmd.delete"
