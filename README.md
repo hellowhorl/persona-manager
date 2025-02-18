@@ -4,6 +4,13 @@ This utility allows administrators and system builders to interact with the crea
 limited control of OpenAI Assistant threads. This utility requires a connection to an API
 server as described in `[whorl-server](https://github.com/hellowhorl/whorl-server)`.
 
+## Installing
+
+To install `pmgr`, use the following `pip` command:
+```bash
+python -m pip install git+https://github.com/hellowhorl/persona-manager
+```
+
 ## Commands
 
 Invoke each of the following commands using the `pmgr` CLI command:
