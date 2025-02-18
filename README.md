@@ -31,4 +31,4 @@ This command features two required and one optional flag:
 
 ### `delete`
 
-* --thread_id`: ID of thread to delete
+* `--thread_id`: ID of thread to delete
