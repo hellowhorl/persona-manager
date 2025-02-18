@@ -32,3 +32,22 @@ This command features two required and one optional flag:
 ### `delete`
 
 * `--thread_id`: ID of thread to delete
+
+### `inventory`
+
+The `inventory` command allows managers to look at and add to inventories of any user, agent (persona)
+or not. This command elaborates the CLI command structure:
+```pmgr inventory <method> <flags>```
+The various methods are listed below
+
+#### `--listing`
+
+Requires:
+
+* `--name`: name of user to look up inventory for
+
+#### `--add`
+
+* `--name`: name of user for which to alter inventory
+* `--item`: name of item file (in current working directory) to add
+
