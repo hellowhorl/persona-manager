@@ -99,6 +99,7 @@ class Cmd:
             if not item:
                 print("An item is required!")
             instance = Instance(item)
+            instance.transmit['item_owner'] = name
             response = requests.post(
                 f"{api_url}:{api_port}/v1/inventory/add/",
                 data = instance.transmit,
